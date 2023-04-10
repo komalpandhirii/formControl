@@ -1,0 +1,20 @@
+<form action="" [formGroup]="login" (ngSubmit)="onSubmit()">
+    <input formControlName="userName"  type="text" placeholder="Enter your Name">
+    <br>
+    <br>
+    <span *ngIf="userName && userName.invalid && userName.touched" style="color: red;">
+        This field in invalid
+    </span>
+    <br>
+    <br>
+    <input formControlName="password" type="text" placeholder="Enter Password">
+    <br>
+    <br>
+    <span *ngIf="password && password.invalid && password.touched" style="color: red;">
+        This field in invalid
+    </span>
+    <br>
+    <br>
+    <button [disabled]="login.invalid">Submit</button>
+</form>
+<!-- <input type="text" placeholder="Enter Your ID"> -->
